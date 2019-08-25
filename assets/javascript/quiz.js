@@ -10,6 +10,14 @@ var questions = [
 var answer;
 var response;
 
-answer = prompt(questions[0][1]);
+for (var i = 0; i < questions.length; i += 1) {
 
-console.log(questions);
+    answer = prompt(questions[i][1]);
+    response = answer.toLocaleLowerCase();
+
+    if (response === questions[i][2]) {
+        document.write(`<h2>Question ${questions[i][0]} correct.</h2>`);
+    } else {
+        document.write(`<h2>Question ${questions[i][0]} wrong.</h2>`);
+    }
+}

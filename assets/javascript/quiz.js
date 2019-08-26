@@ -1,6 +1,6 @@
-let score = 0;
-let currentQuestion = 0;
-let questions = [{
+var score = 0;
+var currentQuestion = 0;
+var questions = [{
         title: "How many oscars did the Titanic movie get?",
         answers: ["Eleven", "Twelve", "Nine", "Ten"],
         correct: 0
@@ -40,4 +40,40 @@ let questions = [{
         answers: ["Batman Begins", "The Dark Knight", "The Dark Knight Rises", "American Psycho"],
         correct: 1
     },
-]
+];
+
+
+
+$(document).ready(function() {
+
+    $('.start a').click(function(e) {
+        e.preventDefault();
+        $('.start').hide();
+        $('.quiz').show();
+        showQuestion();
+    });
+
+
+
+});
+
+
+
+function showQuestion() {
+    let question = questions[currentQuestion];
+    $('.quiz h2').text(question.title);
+
+
+};
+
+function checkAnswer() {
+
+
+
+};
+
+function showSummary() {
+
+
+
+};
